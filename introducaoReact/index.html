@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao React</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="app"></div>
+
+    </div>
+
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script>
+        // function divParagrafo () {
+
+        //     return (
+        //         React.createElement('div',{className:'divParagrafo'},
+        //             React.createElement('p', null, 'Não deu pro mengão e eu sou São Paulino')
+        //         )
+        //     )
+        // }
+
+        // function ReforçandoConceito() {
+
+        //     return (
+        //         React.createElement('div', {className: 'div2'},
+        //             React.createElement(divParagrafo)
+        //         )
+        //     )
+        // }
+
+        const nomeContext = React.createContext('nome')
+
+        function Componente2() {
+            const meuNome = 'Adrian'
+           
+            return (
+                React.createElement(nomeContext.Provider, { value: meuNome },
+                    React.createElement('div', { className: "componente2" },
+                        React.createElement(Componente3, { nome: meuNome})
+                    )   
+                )
+
+
+            )
+        }
+
+        function Componente3() {
+
+
+            return (
+                
+                React.createElement(nomeContext.Consumer, null,
+                    (nome, idade) => (
+
+                        React.createElement('div', { className: 'componente3' },
+                            React.createElement('p', null, nome, idade)
+                        )
+                    )
+                )
+
+            )
+        }
+
+
+
+        function MainComponente() {
+
+            return (
+                React.createElement('div', { className: 'mainComponent' },
+                    React.createElement(Componente2)
+                ))
+        }
+
+        ReactDOM.render(
+            React.createElement(MainComponente, { id: "teste" }),
+
+            document.querySelector('#app')
+        )
+    </script>
+
+
+</body>
+
+</html>
