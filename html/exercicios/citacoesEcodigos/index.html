@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Outras formatações</title>
+    <style>
+        #codigo{
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Código-fonte / pré-formatado</h2>
+    <p>O comando <code id="codigo">document.getElementById('teste')</code> busca um elemento HTML que tem um id igual a "teste"</p>
+
+    <pre>        
+    <code id= "if">
+const num = 256
+if(num % 2 == 0) {
+    console.log(`${num} é divisivel por 2!`)
+}else {
+    console.log(`${num} não é divisivel por 2!`)
+}
+    </code>
+    </pre>
+    <h2>Citações em &lt;HTML&gt;</h2>
+
+    <h3>Citação simples | &lt;q&gt;</h3>
+    <p>Como kobe Bryant disse a sua mãe uma vez:  <q>Mom, I'm going to play in the NBA</q></p>
+
+    <h3>Citação em blocos | &lt;blockquote&gt;</h3>
+
+    <p>
+        Como Kobe Bryant dizia:
+        <blockquote cite="https://www.youtube.com/watch?v=4ynvsrkamt8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=24"> <q>A dor não diz quando você deve parar. A dor é a vozinha em sua cabeça que tenta impedi-lo pois sabe que, se você continuar, você irá mudar</q>
+        </blockquote>
+    </p>
+
+    <hr>
+
+    <p>2 <sup>2</sup> é igual a 4.</p>
+
+    <p>Co<sub>2</sub> é a fórmula do Gás Carbonico</p>
+
+    <pre>
+        A identação dentro da tag &lt;pre&gt; vai ser considerada quando renderizar a página HTML
+    </pre>
+
+    <hr>
+
+    <h2>Abreviações</h2>
+    <p>No <abbr title="Java Script">JS</abbr> tudo é <abbr title="Java Script Object Notation">JSON</abbr>.</p>
+</body>
+</html>
