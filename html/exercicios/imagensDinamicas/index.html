@@ -9,13 +9,34 @@
 <body>
     <h1>Imagens dinâmicas</h1>
     <p></p>
-
     <picture>
-        <source media="(min-width: 1050px" srcset="./imagens/adriang.png" type="image/png">   
+        <source media="(min-width: 1050px)" srcset="./imagens/adriang.png" type="image/png">
+        <source media="(min-width: 950px)" srcset="./imagens/adrian900.png" type="image/png">
         <source media="(min-width: 750px)" srcset="./imagens/adrianm.png" type="image/png">
         <source media="(min-width: 550px)" srcset="./imagens/adrian500.png" type="image/png">
+        <source media="(min-width: 400px)" srcset="./imagens/adrian450.png" type="image/png">
         <img src="./imagens/adrianp.png" alt="Imagem flexivel">
+
     </picture>
+
+
+        <h1>Colocando audios nas páginas HTML</h1>
+        <hr>
+        <h2>1° maneira:</h2>
+        <audio src="./midias/Polymetric Juggling - DivKid.mp3" controls loop></audio> <br>
+        <h2>2° maneira: </h2>
+        <audio preload="metadata" controls >
+            <source src="midias/Yah Ribon - E's Jammy Jams.mp3" type="audio/mpeg">
+            <source src="./midias/Polymetric Juggling - DivKid.mp3" type="audio/mpeg">
+
+            <p>Infelismente seu navegador não suporta audio :/ - clique <a href="./midias/Polymetric Juggling - DivKid.mp3" download="./midias/Polymetric Juggling - DivKid.mp3">aqui</a> para baixar o áudio</p>
+
+        </audio>
+
+        
+
+
+    
 
 
 </body>
