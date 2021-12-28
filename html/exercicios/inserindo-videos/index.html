@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo esta hospedado em meu próprio servidor</p>
+    <hr>
+    <h2>1° forma: </h2>
+    <video src="midias/meu-video.mp4" poster="../imagensDinamicas/imagens/adrian500.png" controls width="500" height="300"></video>
+    <br>
+    <h2>2° forma: </h2>
+    <video controls height="300" width="500" poster="../imagensDinamicas/imagens/adrian500.png">
+        <source src="./midias/meu-video.webm" type="video/webm">
+        <source src="./midias/meu-video.mp4" type="video/mp4">
+        <p>Infelizmente seu navegador não é compativel vídeos</p>
+    </video>
+</body>
+</html>
