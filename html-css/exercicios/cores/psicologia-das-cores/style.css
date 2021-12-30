@@ -1,0 +1,19 @@
+
+.box{
+    padding: 15px;
+    background-color: #9E9900;
+    border-radius: 15px;
+    /*border: 2px solid hsl(0, 60%, 46%);*/
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    color: #3F009E  ;
+}
+
+.box h1{
+    position: relative;
+    width: 300px;
+    left: 35%;
+    text-align: center;
+    /*background-color: rgba(252, 170, 19, 0.63);*/
+}
