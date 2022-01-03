@@ -1,19 +1,32 @@
 
 .box{
     padding: 15px;
-    background-color: #9E9900;
+    background-color: hsl(0, 39%, 48%);
     border-radius: 15px;
     /*border: 2px solid hsl(0, 60%, 46%);*/
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     text-align: justify;
-    color: #3F009E  ;
+    color: hsl(147, 100%, 42%);
 }
 
 .box h1{
     position: relative;
-    width: 300px;
-    left: 35%;
+    width: 400px;
+    left: 30%;
     text-align: center;
     /*background-color: rgba(252, 170, 19, 0.63);*/
+}
+.boxDentro{
+    position: relative;
+    text-align: justify;
+    width:300px;
+    top: -100px;
+}
+
+.segundoP{
+    position: relative;
+    left: 340px;
+    text-align: justify;
+    width:800px;
 }

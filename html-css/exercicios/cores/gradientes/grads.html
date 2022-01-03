@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradientes em CSS3</title>
+    <style>
+        *{
+            height: 100%;
+        }
+        body{
+            background-image: linear-gradient(to right, rgb(53, 79, 122) 20%, rgb(46, 77, 131) 60% ,rgb(53, 98, 175));
+            background-attachment: fixed;
+            color: rgb(170, 170, 40);
+        }
+        .text1{
+            position: relative;
+            /*background-image: linear-gradient(90deg, rgb(141, 116, 62), rgb(192, 151, 62));*/
+            border: 3px solid rgb(192, 151, 62);
+            height: 200px;
+            width: 300px;
+            top: -450px;
+            padding: 15px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando gradientes</h1>
+    <p class="text1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto eaque expedita quaerat velit nam accusamus ex obcaecati labore? Sint deleniti inventore error tempora similique sed commodi vel saepe. Quae, beatae.
+    </p>
+</body>
+</html>
