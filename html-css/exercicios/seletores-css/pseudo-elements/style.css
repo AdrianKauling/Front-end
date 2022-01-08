@@ -1,0 +1,75 @@
+body{
+    font: normal 20px Arial helvetica sans-serif;
+    background-color: #94F2E3;
+}
+.box{
+    position: relative;
+    top: 90px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 480px;
+    height: 300px;
+    padding: 15px;
+    box-shadow: 5px 5px 2px black;
+    background-color: white;
+
+}
+.box > h1{
+    position: relative;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+.icones{  
+    width: 20px;
+    height: 20px;
+}
+
+.links{
+    text-decoration: none;
+}
+
+
+
+.links::after{
+    content:' | link';
+    color: darkgray;
+}
+
+.links::before{
+    content: ' | ';
+    color: darkgray;
+}
+
+a#link-instagram:hover{  
+    border-radius: 5px;
+    background-color: #bc1f76;
+    color: white;
+    padding: 2px;
+}
+a#link-linkedin:hover{
+    border-radius: 5px;
+    background-color: #00669C;
+    color: white;
+    padding: 2px;
+}
+a#link-gitHub:hover{
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 2px;  
+}
+
+a#link-gitHub:active{
+    color: rgba(255, 255, 255, 0.432);
+}
+a#link-instagram:active{
+    color:  rgba(255, 255, 255, 0.432);
+}
+a#link-linkedin:active{
+    color:  rgba(255, 255, 255, 0.432);
+}
+
+

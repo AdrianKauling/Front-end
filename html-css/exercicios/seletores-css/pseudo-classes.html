@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses em CSS3</title>
+    <style>
+        div{
+            display: inline-block;
+            text-align: center;
+            border: 1px solid black;
+            background-color: rgb(178, 203, 248);
+            height: 200px;
+            width: 200px;
+            
+        }
+        div:hover{
+            background-color: yellow;
+        }
+
+        div:hover > .tipo2 {
+            display: block;
+        }
+        div > p{
+            display: none;
+        }
+        .tipo2{
+            font: normal 18px Arial;
+        }
+        .tipo3{
+            font: bold 18px Arial;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="d1" >01
+        <p class="tipo2 tipo3">Aparece só com hover</p>
+    </div>
+    <div>02</div>
+    <div>03
+        <p class="tipo1 tipo3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem tenetur qui harum repellendus et officia veritatis, explicabo ducimus magni quo earum, modi ea voluptas neque placeat numquam! Hic, libero.</p>
+        <p class="tipo2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat numquam quasi ut similique magnam officiis laudantium odit molestiae, voluptatum nisi error distinctio nobis at eum, ratione officia porro sunt. A.</p>
+        <p class="tipo1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat numquam quasi ut similique magnam officiis laudantium odit molestiae, voluptatum nisi error distinctio nobis at eum, ratione officia porro sunt. A.</p>
+    </div>
+</body>
+</html>
