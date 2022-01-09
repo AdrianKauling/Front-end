@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+
+        h1{
+            width: 408px;
+            height: 65px;
+            border-color: aqua;
+            border-style: solid;
+            border-width: 10px;
+            padding: 38px 28px 12px 18px;
+            
+            font: 32px 'Times New Roman', Times, serif;
+            background-color: rgb(6, 187, 187);
+            /*
+                text-shadow: 
+                    -1px -1px 0px #fff,
+                    -1px  1px 0px #fff,
+                    1px  1px 0px #fff,  
+                    1px  -1px 0px #fff  
+            ;
+                -webkit-text-stroke: 1px #FFF;
+            */
+            text-shadow: 
+               -1px -1px 0px #FFF, 
+               -1px 1px 0px #FFF,                    
+                1px -1px 0px #FFF,                  
+                1px 0px 0px #FFF;
+        }
+
+        p#lorem{
+            background-color: rgb(92, 14, 14);
+            font-family: "Comforter Brush", cursive;
+            font-size: 25px;
+            text-indent: 1.5em;
+            color: black;
+
+            text-shadow: 
+                1px 1px 0px #fff,
+                1px -1px 0px #fff,
+                -1px -1px 0px #fff,
+                -1px 1px 0px #fff
+            ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Caixa Box-Level</h1>
+    <p>A âncora é um exemplo de <a href="#">Inline-Level</a></p>
+    <p id="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, rem delectus tempora eum, repellendus officia magnam vel non deserunt praesentium minus facilis consequuntur corrupti itaque officiis id placeat et! Animi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus aperiam veritatis error facilis, quidem reprehenderit explicabo consequatur quos, tempore vero fugit sint doloribus maiores atque unde quas sit repudiandae reiciendis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ut quasi expedita quidem maxime sapiente consectetur. Officia perspiciatis molestias molestiae tempore commodi nobis velit minima et eos? Eius, explicabo soluta.</p>
+</body>
+</html>
