@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+body{
+    margin: 0px;
+    font: 20px Arial, helvetica, sans-serif;
+    
+    background-color: rgb(156, 235, 156);
+}
+
+main{
+    border: 5px solid rgb(31, 117, 31);
+    width: 1000px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 3px;
+}
+
+header{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(109, 221, 109);
+    padding: 1px;
+}
+header > h1{
+    background-color: rgb(156, 241, 156);
+    text-align: center;
+    width: 400px;
+    margin: 10px auto;
+    padding: 3px;
+    border: 8px solid rgb(31, 117, 31);
+}
+
+article > h2{
+    margin-top: 70px;
+}
+
+.img-livros{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background-color: green;
+}
+
+p#p-porque-engordamos{
+    background-color: white;
+    margin: 0px;
+    padding: 17px 5px 17px 5px;
+    text-align: justify;
+    text-indent: 1.5em;
+    margin-left: 20px;
+}
+
+article > h3{
+    text-align: center;
+    margin-left: 40px;
+    
+}
+
+#primeiro-livro{
+    border: 3px solid green;
+    padding: 10px;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    font:bold 25px Arial, helvetica, sans-serif;
+    color: white;
+    padding: 5px;
+}

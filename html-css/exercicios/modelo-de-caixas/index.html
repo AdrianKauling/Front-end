@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
 
         h1{
-            width: 408px;
+            width: 708px;
             height: 65px;
             border-color: aqua;
             border-style: solid;
@@ -32,6 +32,11 @@
                -1px 1px 0px #FFF,                    
                 1px -1px 0px #FFF,                  
                 1px 0px 0px #FFF;
+            text-align: center;
+
+            outline: 10px solid blue;
+
+            margin: 30px auto;
         }
 
         p#lorem{
@@ -47,12 +52,20 @@
                 -1px -1px 0px #fff,
                 -1px 1px 0px #fff
             ;
+
+            
+        }
+
+        a#inline-level{
+            display: inline;
         }
     </style>
 </head>
 <body>
     <h1>Exemplo de Caixa Box-Level</h1>
-    <p>A âncora é um exemplo de <a href="#">Inline-Level</a></p>
+    <p>A âncora é um exemplo de <a href="#" id="inline-level">Inline-Level</a></p>
+
+
     <p id="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, rem delectus tempora eum, repellendus officia magnam vel non deserunt praesentium minus facilis consequuntur corrupti itaque officiis id placeat et! Animi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus aperiam veritatis error facilis, quidem reprehenderit explicabo consequatur quos, tempore vero fugit sint doloribus maiores atque unde quas sit repudiandae reiciendis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ut quasi expedita quidem maxime sapiente consectetur. Officia perspiciatis molestias molestiae tempore commodi nobis velit minima et eos? Eius, explicabo soluta.</p>
 </body>
 </html>
