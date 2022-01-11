@@ -1,3 +1,9 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'android';
+    src: url(./fontes/iDroid.otf) format('opentype');
+}
 body{
     margin: 0px;
     background-color: rgb(116, 202, 116);
@@ -36,6 +42,8 @@ main{
     background-color: white;
     margin:auto;
     width: 800px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.123);
+    border-radius: 10px;
 }
 main > article{
     margin: auto;
@@ -47,13 +55,19 @@ main > article > p {
     margin: 0px;
 }
 
-main > article > h1 {
+main > article > h1 { 
+    
     margin:0px;
     padding: 20px;
 }
 main > article > h2 {
-    margin:0px;
-    padding: 22px;
+    font-family: 'android',Arial, Helvetica, sans-serif ;
+    margin:auto;
+    padding-left: 6px;
+    width: 750px;
+    height: 30px;
+    background-image:linear-gradient(to right, rgb(143, 221, 143), white);
+    color: rgb(34, 82, 34);
 }
 main > h1 {
     margin:0px;
@@ -65,10 +79,23 @@ main > article > p > a::after {
 
 #titulo-principal{
     font-size: 2em;
+    font-family: 'android',Arial, Helvetica, sans-serif ;
 }
 
 #dan-droids{
     margin: auto;
+}
+
+
+article > ul {
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+article > ul > li > span {
+    text-decoration: underline;
+}
+article > ul > li::before{
+    content: '📍 ';
 }
 
 footer{
@@ -83,4 +110,25 @@ footer > p{
     display: inline;
     font-weight: bold;
     
+}
+
+article#quer-aprender-mais{
+    background-color: rgb(188, 221, 188);
+    margin: 10px auto auto auto;
+    width: 765px;
+    padding: 0px 0px 10px 0px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.11);
+}
+#quer-aprender-mais > h1 {
+    background-color: rgb(73, 163, 73);
+    margin: 0px;
+    color:white;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+aside > p {
+    padding: 20px;
+    text-indent: 1.5em;
 }
