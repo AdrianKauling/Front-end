@@ -28,6 +28,7 @@ header > h1{
     margin: 10px auto;
     padding: 3px;
     border: 8px solid rgb(31, 117, 31);
+    box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.089);
 }
 
 article > h2{
@@ -66,5 +67,9 @@ footer{
     background-color: black;
     font:bold 25px Arial, helvetica, sans-serif;
     color: white;
-    padding: 5px;
+    padding: 16px;
+}
+
+footer > h1{
+    margin: 0px;
 }
