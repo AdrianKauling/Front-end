@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React - Introdução</title>
+</head>
+<body>
+    
+    <div id="app"></div>
+
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script>
+
+        function meuComponente1(){
+            return (
+                React.createElement('div',{ className:'componente-1' }, 
+                    React.createElement(meuComponente2),
+                    React.createElement('div', {className: 'Filhao'}, 'Dale')
+                )
+            )
+        }
+
+        function meuComponente2(){
+            return (
+                React.createElement('div',{className:'componente-2'}, 
+                    React.createElement(meuComponente3)
+                )
+            )
+        }
+
+        function meuComponente3(){
+            return (
+                React.createElement('div', {className:'componente-3'}, 
+                    React.createElement(meuComponente4)
+                )
+            )
+        }
+
+        function meuComponente4(){
+            return React.createElement('h1', {className:'componente-4'}, 'Sou filho de geralll, aeee karaii!!')
+        }
+
+        function meuComponente() {
+            return (
+                React.createElement('main', {className: 'meuComponente'}, 
+                    React.createElement(meuComponente1)
+                )
+            )           
+        }
+
+        ReactDOM.render(
+            React.createElement(meuComponente),
+            document.querySelector('#app')
+        )
+    </script>
+</body>
+</html>
