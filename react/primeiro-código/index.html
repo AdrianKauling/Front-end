@@ -16,33 +16,59 @@
 
     <script>
 
+        const propNome = React.createContext('nome')
+
         function meuComponente1(){
+
+            const nome = 'Adrian Kauling dos Santos'
+
             return (
-                React.createElement('div',{ className:'componente-1' }, 
-                    React.createElement(meuComponente2),
-                    React.createElement('div', {className: 'Filhao'}, 'Dale')
+
+                React.createElement(propNome.Provider, { value: 'Adrian Kauling dos Santos'},
+                    React.createElement('div',{ className:'componente-1'}, 
+                        React.createElement(meuComponente2, { nome }),
+                        React.createElement('div', {className: 'Filhao'}, 'Dale')
+                    )
                 )
+                
             )
         }
 
-        function meuComponente2(){
+        function meuComponente2(props){
+            console.log(props)
             return (
                 React.createElement('div',{className:'componente-2'}, 
-                    React.createElement(meuComponente3)
+                    React.createElement(meuComponente3, {id:"componente-2", nome:props.nome, idade:17})
                 )
             )
         }
 
-        function meuComponente3(){
+        function meuComponente3(props){
             return (
-                React.createElement('div', {className:'componente-3'}, 
-                    React.createElement(meuComponente4)
+                React.createElement(propNome.Consumer, null, 
+                    (nome) => (
+                        React.createElement('div', {className:'componente-3'}, 
+                            React.createElement(meuComponente4,props)
+                    )
+                    )
                 )
+
+                
             )
         }
 
-        function meuComponente4(){
-            return React.createElement('h1', {className:'componente-4'}, 'Sou filho de geralll, aeee karaii!!')
+        function meuComponente4(props){
+            
+            return (
+                React.createElement(propNome.Consumer,null, 
+                    (nome) => (
+                        React.createElement('h1', {className:'componente-4'}, 'Sou filho de geralll, aeee karaii!! Aliás meu nome é ' + nome + ' | '+props.idade + ' anos')
+                    )
+                
+                )
+            
+                
+            )
         }
 
         function meuComponente() {

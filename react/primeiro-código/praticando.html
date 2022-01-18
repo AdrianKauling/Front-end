@@ -28,10 +28,25 @@
                     )
                 )
             )
-    }
+        }
+
+        function testando() {
+            return (
+                React.createElement('div',null,
+                    React.createElement(filhoTeste)    
+                )
+            )
+        }
+
+        function filhoTeste(){
+            return (
+                'div', {id:"Teste"}, 
+                    React.createElement('div',null, 'Deu boa')
+            )
+        }
 
         ReactDOM.render(
-            React.createElement(myHeaders),
+            React.createElement(testando),
             document.querySelector('#app')
         )
     </script>
