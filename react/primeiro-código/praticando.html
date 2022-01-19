@@ -17,6 +17,21 @@
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
     <script>
+        const CriadorDoSite = React.createContext('nome')
+
+        function elementMain() {
+            return (
+                React.createElement(CriadorDoSite.Provider, {value:'Roberto toledo'},
+                    React.createElement('div',null,
+                        React.createElement(myHeaders),
+                        React.createElement(myContentMain),
+                        React.createElement(footer)
+                    )
+                )
+            )
+        }
+
+
         function myHeaders() {
             return (
                 React.createElement('header', null, 
@@ -30,23 +45,56 @@
             )
         }
 
-        function testando() {
+        function myContentMain() {
             return (
-                React.createElement('div',null,
-                    React.createElement(filhoTeste)    
+                React.createElement('main', null, 
+                    React.createElement(myArticle)                                   
+                ) 
+            )
+        }
+
+        function myArticle() {
+            return (
+                React.createElement('article',null, 
+                    React.createElement('h1', null, 
+                        'O que é React?'    
+                    ),
+
+                    React.createElement('p', null, 
+                        'React é uma biblioteca JavaScript que cria UIs.'
+                    )
+
                 )
             )
         }
 
-        function filhoTeste(){
+        function footer() {
             return (
-                'div', {id:"Teste"}, 
-                    React.createElement('div',null, 'Deu boa')
+                React.createElement('footer', null, 
+                    React.createElement('p', null,
+                        'Site criado por ', 
+                        React.createElement(ancora)
+                    )
+                )
             )
         }
 
+        function ancora(){
+            return (
+                React.createElement(CriadorDoSite.Consumer,null,
+                    nome => (
+                        React.createElement('a', {href: 'https://github.com/adriankauling', target:'_blank'},
+                             nome
+                        )
+                    )
+                )
+            )
+                
+        
+        }
+
         ReactDOM.render(
-            React.createElement(testando),
+            React.createElement(elementMain),
             document.querySelector('#app')
         )
     </script>
