@@ -1,30 +1,31 @@
-const propNome = React.createContext('nome');
-
 function meuComponente1() {
   const nome = 'Adrian Kauling dos Santos';
-  return /*#__PURE__*/React.createElement(propNome.Provider, {
-    value: nome
-  }, /*#__PURE__*/React.createElement(meuComponente2, null), /*#__PURE__*/React.createElement("div", {
-    className: "Filhao"
-  }, "Dale"));
+  let [idade, setIdade] = React.useState(17);
+  setTimeout(() => {
+    setIdade(18);
+  }, 1000);
+  return /*#__PURE__*/React.createElement(meuComponente2, null, /*#__PURE__*/React.createElement(meuComponente3, null, /*#__PURE__*/React.createElement(meuComponente4, {
+    idade: idade,
+    nome: nome
+  }), /*#__PURE__*/React.createElement("p", null, idade)));
 }
 
 function meuComponente2(props) {
   return /*#__PURE__*/React.createElement("div", {
     className: "componente-2"
-  }, /*#__PURE__*/React.createElement(meuComponente3, null));
+  }, props.children);
 }
 
-function meuComponente3() {
+function meuComponente3(props) {
   return /*#__PURE__*/React.createElement("div", {
     className: "componente-3"
-  }, /*#__PURE__*/React.createElement(meuComponente4, null));
+  }, props.children);
 }
 
-function meuComponente4() {
-  return /*#__PURE__*/React.createElement(propNome.Consumer, null, nome => /*#__PURE__*/React.createElement("h1", {
+function meuComponente4(props) {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
     className: "componente-4"
-  }, "Sou filho de geralll, aeee karaii!! Alias meu nome e " + nome));
+  }, "Sou filho de geralll, aeee karaii!! Alias meu nome e ", props.nome), /*#__PURE__*/React.createElement("p", null, "Tenho ", props.idade, " anos."));
 }
 
 function meuComponente() {

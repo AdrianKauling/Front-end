@@ -1,51 +1,56 @@
-const propNome = React.createContext('nome')
-
 function meuComponente1() {
 
     const nome = 'Adrian Kauling dos Santos'
 
+    let [idade,setIdade] = React.useState(17)
+
+    setTimeout(() => {
+        setIdade(18)
+    }, 1000)
+
     return (
-        <propNome.Provider value={nome}>
-            <meuComponente2/>
-            <div className="Filhao">
-                Dale
-            </div>
-        </propNome.Provider>
+        <meuComponente2>
+            <meuComponente3>
+                <meuComponente4  idade={idade} nome={nome}/>
+                <p>{idade}</p>
+            </meuComponente3>
+        </meuComponente2>
     )
 }
 
-function meuComponente2() {
+function meuComponente2(props) {
     
     return(
         <div className="componente-2">
-            <meuComponente3/>
+            {props.children}
         </div>
     )
 }
 
 
-function meuComponente3() {
+function meuComponente3(props) {
 
     return (
         <div className="componente-3">
-            <meuComponente4/>
+            {props.children}
         </div>
     )
 }
 
 
-function meuComponente4() {
+function meuComponente4(props) {
 
     return(
-        <propNome.Consumer>
-            {
-                nome => (
-                    <h1 className="componente-4">
-                        Sou filho de geralll, aeee karaii!! Alias meu nome e{nome}
-                    </h1>
-                )
-            }
-        </propNome.Consumer>
+        <div>
+            
+            <h1 className="componente-4">
+                Sou filho de geralll, aeee karaii!! Alias meu nome e {props.nome}
+            </h1>
+
+            <p>Tenho {props.idade} anos.</p>
+            
+        </div>
+                
     )
 }
 

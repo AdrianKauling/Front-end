@@ -1,0 +1,12 @@
+main {
+    background-color: lightblue;
+    max-width: 250px;
+    margin: auto;
+    border-radius: 10px 0px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397) ;
+}
+
+main > div{
+    padding: 10px 20px 10px 20px;
+}
