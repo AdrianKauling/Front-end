@@ -1,0 +1,16 @@
+{
+  "name": "sum-of-two-lowest-positive-integers",
+  "version": "1.0.0",
+  "description": "Desafio do CodeWars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian Kauling",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.10",
+    "@babel/preset-react": "^7.16.7"
+  }
+}

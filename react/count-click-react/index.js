@@ -5,7 +5,6 @@ function componentMain() {
 
   const newValue = () => {
     setValue(valueCorrently + 1);
-    console.log(valueCorrently);
   };
 
   return /*#__PURE__*/React.createElement(test.Provider, {
@@ -37,6 +36,7 @@ function filhoMain2(props) {
 }
 
 function boxContagem(props) {
+  React.useEffect(() => console.log('- ' + props.valueCount));
   return /*#__PURE__*/React.createElement(test.Consumer, null, valueCorrently => /*#__PURE__*/React.createElement("h2", null, "Contagem: ", valueCorrently));
 }
 
