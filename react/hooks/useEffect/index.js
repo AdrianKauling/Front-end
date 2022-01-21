@@ -1,6 +1,10 @@
+const {createContext, useState, useEffect, useContext} = React 
+
+const counterContext = createContext('counter')
+
 function AppComponent() {
 
-    const [counter,setCounter] = React.useState(0)
+    const [counter,setCounter] = useState(0)
 
     function somaUm () {
         setCounter( prevState => prevState + 1)
@@ -9,21 +13,36 @@ function AppComponent() {
     function tiraUm () {
         setCounter( prevState => prevState - 1)
     }    
+    
+    // useEffect(
+    //     () => {
 
-    React.useEffect(
-        () => {
-
-            return (console.log('useEffect rodou!'))
-        },
-        [counter]
-    )
+    //         return (console.log('useEffect rodou!'))
+    //     },[somaUm]
+    // )
 
     return (
-        <React.Fragment>
-            <h1>{counter}</h1>
+        <counterContext.Provider value={{counter}}>
+
+            <Myh1/>
             <button onClick = {somaUm }>bota</button>
             <button onClick = {tiraUm}>tira</button>
-        </React.Fragment>
+
+        </counterContext.Provider>
+    )
+}
+
+function Myh1() {
+
+    const counter = useContext(counterContext)
+
+    useEffect(() => {
+        return () => console.log('counter mudou de estado')
+    }, [counter.counter])
+    
+    
+    return (
+        <h1>{counter.counter}</h1>
     )
 }
 
