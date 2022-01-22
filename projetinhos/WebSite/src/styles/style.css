@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@200&family=Patrick+Hand&display=swap');
+
 :root{
-    --main-color-0: #dc96f5;
-    --main-color-1: #B800FA;
-    --main-color-2: #9200C7;
-    --main-color-3: #B800FA;
-    --main-color-4: #5A007A;
+    --montserrat: 'Montserrat', sans-serif;
+    --merriweather: 'Merriweather', serif;
+    --Patrick-hand: 'Patrick Hand',cursive;
+    --main-color-0: #010e16;
     --complementar-0:#EDFF8B;
     --complementar-1:#C3E627;
     --complementar-2:#7D9900;
@@ -18,10 +19,11 @@
 }
 
 body{
-    background-color: var(--complementar-3);
+    background-color: var(--complementar-0);
 }
 
 header{
+    color: var(--main-color-0);
     display: flex;
     margin: auto;
     background-color: var(--complementar-2);
@@ -48,6 +50,7 @@ header div#img{
     align-items: center;
 }
 header h1{
+    font-size:var(--merriweather);
     padding: 0px 10px 0px 10px;
     max-width: 350px;
     margin-left: 30px;
@@ -56,16 +59,17 @@ header h1{
 }
 
 header p{
+    font-family: var(--Patrick-hand);
     margin-left: 20px;
     padding: 10px;
     max-width: 500px;
     text-align: center;
-    font-size: 1.3em;
-
+    font-size: 1.5em;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.178);
 }
 
 header span{
-    border:1px solid black;
+    border:1px solid var(--main-color-0);
     margin-top: 30px;
     margin-bottom: 20px;
 }
@@ -81,6 +85,85 @@ header img {
 }
 
 main{
+    
     display: flex;
-            
+    flex-direction: row;
+    background-color: white;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    
+    margin-bottom: 30px
+}
+
+main article {
+    background-color: #122c3b;
+    color: var(--complementar-0);
+    font-family: var(--montserrat);
+    width: 600px;
+
+}
+
+article h1{
+    font-family: var(--merriweather);   
+    color: var(--complementar-1);
+    background-color: #010e16;
+    padding: 9px;
+}
+
+article p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 1.5em;
+    padding: 20px;
+    text-align: justify;
+}
+
+main aside {
+    margin-right: 0px;
+    width: 50%;
+}
+
+aside h2 {
+    font-family: var(--merriweather);
+    color: var(--complementar-1);
+    background-color: #010e16;
+    padding: 8px;
+    padding-bottom: 10px;
+}
+
+aside div{
+    padding: 10px;  
+    background-color: #011e2e;
+    color: var(--complementar-0);
+}
+
+aside code {
+    font-size: 12px;
+    
+}
+
+div#testeCodigo{
+    display: flex;
+    background-color: var(--complementar-2);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+div#testeCodigo button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #011e2e;
+    color: var(--complementar-1);
+    font-weight: bold;
+    cursor: pointer;
+    width: 140px;
+    transition: .5s;
+}
+
+div#testeCodigo button:hover {
+    padding: 15px;
+
 }

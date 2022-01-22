@@ -35,7 +35,7 @@ function Main() {
     return (
         <main>
             <Article>
-                <h1>Titulo do desafio</h1>
+                <h1>Sum of two lowest positive integers</h1>
             </Article>
             <JavaScriptAside/>
         </main>
@@ -46,40 +46,69 @@ function Article(props) {
     return(
         <article>
             {props.children}
-            <p>Explicação do desafio </p>
+            <p>
+                Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+            </p>
+            <p>
+                For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+            </p>
+
+            <p>
+                Other example: [10, 343445353, 3453445, 3453545353453] should return 3453455.
+            </p>
         </article>
     )
 }
 
 function JavaScriptAside() {
-    const code = `function findOutlier(integers){
+    const code = `function SumTwoNumbersPositive(array) {
 
-    let par = 0
-    let impar = 0
-
-    for(let i = 0; i < integers.length; i++) {
-        let imparOuPar = integers[i]%2 === 0? 'par': 'impar'
-
-        imparOuPar === 'par'? par += 1: impar += 1
+        if (array.length >= 4) {
+    
+            if (array.filter(p => p > -1 && p === parseInt(p)).length === array.length) {
+    
+                const arrayOrdered = array.sort((a, b) => {
+                    if (a > b) return 1
+                    if (a < b) return -1
+                    if (a === b) return 0
+                })
+    
+                return arrayOrdered[0] + arrayOrdered[1]
+            }
+    
+            throw new Error('Floats numbers or numbers non-positive in the array')
+        }
+    
+        throw new Error('Array with less of four positions.')
     }
-
-    if(par < impar) {
-        const res = integers.filter((position) => position % 2 === 0)
-        return res[0]
-    }else {
-        const res = integers.filter((position) => position % 2 !== 0)
-        return res[0]
-    }
-        
-}`
+    
+    console.log(SumTwoNumbersPositive([992, 28, 66, 87 , 5 ,80 ,9 ,34]))`
     return (
         <aside>
             <h2>Código do desafio resolvido</h2>
 
-            <pre>
-                <code>{code}</code>
-            </pre>
+            <div>
+                <pre>
+    
+                    <code>{code}</code>
+    
+                </pre>
+                
+            </div>
+            <AsideButton/>
         </aside>
+    )
+}
+
+function AsideButton() {
+    return (
+        <div id="testeCodigo">
+            <a href="./teste-o-codigo/index.html" rel="" target="_blank">
+                    <button>Testar o código</button>
+            </a>
+
+            <button>Copiar &#10066;</button>
+        </div>
     )
 }
 
