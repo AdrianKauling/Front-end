@@ -1,11 +1,11 @@
 const { useReducer, useState, useContext, useEffect,createContext } = React
 const ContextStateArray = createContext('stateArray')
-
 const InitialState = { list: [] }
 
 const actions = {
     pushElement: 'pushElement',
-    removeElement: 'removeElement'
+    removeElement: 'removeElement',
+    clearList: 'clearList'
 }
 
 function sortList(list) {
@@ -47,6 +47,11 @@ function reducer(state, action) {
             state.list.splice(indexRemoved - 1, 1)
             return { list: state.list }
 
+        case actions.clearList:
+            
+            console.log('aqui: '+ InitialState.list)
+            return {list: []}
+
         default: 
             return state
     }
@@ -62,6 +67,7 @@ function AppComponent() {
                 <main>
                     <BoxAddElement /> 
                     <BoxRemoveElement/>
+                    <button onClick={() => dispatch({type:actions.clearList})}>Clear List</button>
                     <SunTwoLessNumbersOfList/>              
                 </main>
             </ContextStateArray.Provider>
@@ -74,10 +80,13 @@ function BoxAddElement() {
     return (
         <section>
             
-            <h1>{state.list.join(' - ')}</h1>
+            <div id="list">
+                <h1>List:</h1>
+                <textarea name="" id="" cols="30" rows="10"  readOnly value={state.list.join(', ')}> </textarea>
+            </div>
             <label htmlFor="number-input">Add number in list: </label>
                 <input type="number" id="number-input"/>
-            <button onClick={ () => dispatch({type:actions.pushElement})}>
+            <button onClick={ () => dispatch({type: actions.pushElement})}>
                 Add number in the array
             </button>
 
@@ -104,15 +113,9 @@ function SunTwoLessNumbersOfList() {
     
 
     function attSum () {
-        const arraystring = state.list.join(',')
-
-        const soma = sortList(state.list)
-        setSum(soma)
-
-        state.list = arraystring.split(',')
-        for(let i = 0; i < state.list.length; i++) {
-            state.list[i] = parseInt(state.list[i])
-        }
+        const copyState = state.list.slice()
+        const sumTwoNumbersLess = sortList(copyState)
+        setSum(sumTwoNumbersLess)   
     }
 
     return (

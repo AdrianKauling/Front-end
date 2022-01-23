@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+:root{
+    --main-color-0: #010e16;
+    --complementar-0:#EDFF8B;
+    --complementar-1:#C3E627;
+    --complementar-2:#7D9900;
+    --complementar-3:#e4eeac;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: var(--complementar-0);
+}
+
+main{
+    background-color: var(--complementar-1);
+    max-width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+section h1 {
+    background-color: var(--complementar-2);
+    height: 50px;
+    width: 69%;
+    padding: 10px;
+    margin: auto;
+}
+
+div#list{
+    border: 1px solid red;
+}
+
+section textarea{
+
+    resize: none;
+    background-color: var(--main-color-0);
+    color: var(--complementar-1);
+    height: 40px;
+    width: 90%;
+    padding: 10px; 
+    margin-top: 10px; 
+    border: none;
+}
+section textarea::-webkit-scrollbar {
+    width: 12px;
+}
+section textarea::-webkit-scrollbar-track{
+    background-color: var(--complementar-2);
+}
+section textarea::-webkit-scrollbar-thumb{
+    background-color: var(--main-color-0);
+    border: 3px solid var(--complementar-2);
+    border-radius: 10px;
+}

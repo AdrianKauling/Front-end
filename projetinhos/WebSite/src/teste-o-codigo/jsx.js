@@ -11,7 +11,8 @@ const InitialState = {
 };
 const actions = {
   pushElement: 'pushElement',
-  removeElement: 'removeElement'
+  removeElement: 'removeElement',
+  clearList: 'clearList'
 };
 
 function sortList(list) {
@@ -25,7 +26,7 @@ function sortList(list) {
       return arrayOrdered[0] + arrayOrdered[1];
     }
 
-    throw new Error('Floats numbers or numbers non-positive in the array');
+    alert('Floats numbers or numbers non-positive in the array');
   }
 
   alert('The list need have four positions.');
@@ -47,6 +48,12 @@ function reducer(state, action) {
         list: state.list
       };
 
+    case actions.clearList:
+      console.log('aqui: ' + InitialState.list);
+      return {
+        list: []
+      };
+
     default:
       return state;
   }
@@ -59,7 +66,11 @@ function AppComponent() {
       state,
       dispatch
     }
-  }, /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(BoxAddElement, null), /*#__PURE__*/React.createElement(BoxRemoveElement, null), /*#__PURE__*/React.createElement(SunTwoLessNumbersOfList, null)));
+  }, /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(BoxAddElement, null), /*#__PURE__*/React.createElement(BoxRemoveElement, null), /*#__PURE__*/React.createElement("button", {
+    onClick: () => dispatch({
+      type: actions.clearList
+    })
+  }, "Clear List"), /*#__PURE__*/React.createElement(SunTwoLessNumbersOfList, null)));
 }
 
 function BoxAddElement() {
@@ -70,7 +81,16 @@ function BoxAddElement() {
   {
     console.log(state.list);
   }
-  return /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement("h1", null, state.list.join(' - ')), /*#__PURE__*/React.createElement("label", {
+  return /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement("div", {
+    id: "list"
+  }, /*#__PURE__*/React.createElement("h1", null, "List:"), /*#__PURE__*/React.createElement("textarea", {
+    name: "",
+    id: "",
+    cols: "30",
+    rows: "10",
+    readOnly: true,
+    value: state.list.join(', ')
+  }, " ")), /*#__PURE__*/React.createElement("label", {
     htmlFor: "number-input"
   }, "Add number in list: "), /*#__PURE__*/React.createElement("input", {
     type: "number",
@@ -106,14 +126,9 @@ function SunTwoLessNumbersOfList() {
   const [sum, setSum] = useState(0);
 
   function attSum() {
-    const arraystring = state.list.join(',');
-    const soma = sortList(state.list);
-    setSum(soma);
-    state.list = arraystring.split(',');
-
-    for (let i = 0; i < state.list.length; i++) {
-      state.list[i] = parseInt(state.list[i]);
-    }
+    const copyState = state.list.slice();
+    const sumTwoNumbersLess = sortList(copyState);
+    setSum(sumTwoNumbersLess);
   }
 
   return /*#__PURE__*/React.createElement("aside", null, /*#__PURE__*/React.createElement("h3", null, "The sum is: ", sum), /*#__PURE__*/React.createElement("button", {
