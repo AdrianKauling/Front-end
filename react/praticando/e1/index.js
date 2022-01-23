@@ -1,9 +1,13 @@
 const {useReducer, useState} = React
 
 function reducer(state, action) {
+
+    const valueBtn = document.querySelector('#btn').value
     switch(action.type) {
         case 'add':
-            return state += 1
+
+            state.push(parseInt(valueBtn))
+            return state
 
         case 'minus': 
             return state -= 1 
@@ -12,12 +16,15 @@ function reducer(state, action) {
 
 function MainComponent() {
 
-    const [state, dispatch] = useReducer(reducer, 0)   
-    
+    const [state, dispatch] = useReducer(reducer, [0])   
+    console.log(state)
+
+
     function setStateAdd() {
-        countClicks()
         return dispatch({type:'add'})
     }
+
+
     function setStateMinus() {
         countClicks()
         return dispatch({type:'minus'})
@@ -36,6 +43,7 @@ function MainComponent() {
 
             <button onClick={setStateAdd}>Add</button>
             <button onClick={setStateMinus}>Minus</button>
+            <input type="number" id="btn"/>
         </main>
     )
 }
