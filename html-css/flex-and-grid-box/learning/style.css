@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+:root {
+    --main-color:rgb(15, 15, 15);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+body{
+
+}
+
+header{
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+header > a{
+    margin: 10px 0;
+    font-size: 1.4em;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.menu li{
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+
+.menu a{
+    display: block;
+    padding: 10px;
+}

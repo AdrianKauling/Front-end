@@ -32,32 +32,32 @@ function Article(props) {
 function JavaScriptAside() {
   const code = `function SumTwoNumbersPositive(array) {
 
-        if (array.length >= 4) {
-    
-            if (array.filter(p => p > -1 && p === parseInt(p)).length === array.length) {
-    
-                const arrayOrdered = array.sort((a, b) => {
-                    if (a > b) return 1
-                    if (a < b) return -1
-                    if (a === b) return 0
-                })
-    
-                return arrayOrdered[0] + arrayOrdered[1]
-            }
-    
-            throw new Error('Floats numbers or numbers non-positive in the array')
-        }
-    
-        throw new Error('Array with less of four positions.')
-    }
-    
-    console.log(SumTwoNumbersPositive([992, 28, 66, 87 , 5 ,80 ,9 ,34]))`;
+   if (array.length >= 4) {
+
+       if (array.filter(p => p > -1 && p === parseInt(p)).length === array.length) {
+
+           const arrayOrdered = array.sort((a, b) => {
+               if (a > b) return 1
+               if (a < b) return -1
+               if (a === b) return 0
+           })
+
+            return arrayOrdered[0] + arrayOrdered[1]
+       }
+
+       throw new Error('Floats numbers or numbers non-positive in the array')
+  }
+
+  throw new Error('Array with less of four positions.')
+}
+
+console.log(SumTwoNumbersPositive([992, 28, 66, 87 , 5 ,80 ,9 ,34]))`;
   return /*#__PURE__*/React.createElement("aside", null, /*#__PURE__*/React.createElement("h2", null, "C\xF3digo do desafio resolvido"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("pre", null, /*#__PURE__*/React.createElement("code", null, code))), /*#__PURE__*/React.createElement(AsideButton, null));
 }
 
 function AsideButton() {
   return /*#__PURE__*/React.createElement("div", {
-    id: "testeCodigo"
+    id: "buttons-aside"
   }, /*#__PURE__*/React.createElement("a", {
     href: "./teste-o-codigo/index.html",
     rel: "",

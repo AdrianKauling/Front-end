@@ -143,7 +143,7 @@ aside code {
     
 }
 
-div#testeCodigo{
+div#buttons-aside{
     display: flex;
     background-color: var(--complementar-2);
     flex-direction: row;
@@ -152,7 +152,7 @@ div#testeCodigo{
     height: 50px;
 }
 
-div#testeCodigo button {
+div#buttons-aside button {
     padding: 10px;
     border: none;
     border-radius: 10px;
@@ -164,7 +164,7 @@ div#testeCodigo button {
     transition: .5s;
 }
 
-div#testeCodigo button:hover {
+div#buttons-aside button:hover {
     padding: 15px;
 
 }

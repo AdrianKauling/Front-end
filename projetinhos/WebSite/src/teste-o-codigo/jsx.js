@@ -9,11 +9,6 @@ const ContextStateArray = createContext('stateArray');
 const InitialState = {
   list: []
 };
-const actions = {
-  pushElement: 'pushElement',
-  removeElement: 'removeElement',
-  clearList: 'clearList'
-};
 
 function sortList(list) {
   if (list.length >= 4) {
@@ -32,6 +27,12 @@ function sortList(list) {
   alert('The list need have four positions.');
 }
 
+const actions = {
+  pushElement: 'pushElement',
+  removeElement: 'removeElement',
+  clearList: 'clearList'
+};
+
 function reducer(state, action) {
   switch (action.type) {
     case actions.pushElement:
@@ -43,7 +44,8 @@ function reducer(state, action) {
 
     case actions.removeElement:
       const indexRemoved = document.querySelector('#ipt-remove-element').value;
-      state.list.splice(indexRemoved - 1, 1);
+      const o = state.list.splice(indexRemoved - 1, 1);
+      console.log(o);
       return {
         list: state.list
       };

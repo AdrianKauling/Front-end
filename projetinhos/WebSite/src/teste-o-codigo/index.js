@@ -2,12 +2,6 @@ const { useReducer, useState, useContext, useEffect,createContext } = React
 const ContextStateArray = createContext('stateArray')
 const InitialState = { list: [] }
 
-const actions = {
-    pushElement: 'pushElement',
-    removeElement: 'removeElement',
-    clearList: 'clearList'
-}
-
 function sortList(list) {
 
     if (list.length >= 4) {
@@ -32,6 +26,11 @@ function sortList(list) {
 
 }
 
+const actions = {
+    pushElement: 'pushElement',
+    removeElement: 'removeElement',
+    clearList: 'clearList'
+}
 
 function reducer(state, action) {
     switch (action.type) {
@@ -39,12 +38,13 @@ function reducer(state, action) {
             const newElement = document.querySelector('#number-input').value
             state.list.push(parseInt(newElement))
 
-            return { list: state.list}
+            return { list: state.list }
         
         case actions.removeElement:
             const indexRemoved = document.querySelector('#ipt-remove-element').value
 
-            state.list.splice(indexRemoved - 1, 1)
+            const o = state.list.splice(indexRemoved - 1, 1)
+            console.log(o)
             return { list: state.list }
 
         case actions.clearList:
