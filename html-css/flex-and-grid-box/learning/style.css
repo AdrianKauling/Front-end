@@ -8,12 +8,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: white;
     list-style: none;
-}
-
-body{
-
 }
 
 header{
@@ -28,6 +23,7 @@ header{
 header > a{
     margin: 10px 0;
     font-size: 1.4em;
+    color: white;
 }
 
 .menu{
@@ -42,6 +38,22 @@ header > a{
 }
 
 .menu a{
+    color: white;
     display: block;
     padding: 10px;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+section{
+    display: flex;
+    max-width: 1000px;
+    flex-flow: row wrap;
+}
+section div{
+    margin: 10px;
+    flex: 1 1 200px;
 }
