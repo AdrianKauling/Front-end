@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+@media(max-width:450px) {
+    div#app{
+        background-image:url("../images/pattern-background-mobile.svg");
+
+    background-repeat:repeat-x;
+
+    background-position:center top;
+    }
+}
+
+:root {
+    --main-color:rgba(14, 29, 77, 0.993);
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+div#app{
+    
+    display:flex;
+    height:800px;
+    top:20px;
+    background-image:url("../images/pattern-background-desktop.svg");
+
+    background-size:contain;
+
+    background-repeat:repeat-x;
+
+    
+
+    background-color:rgb(176, 210, 230);
+    justify-content: center;
+    align-items: center;
+}
+
+div.MainContainer {
+    position:relative;
+    top:-20px;
+
+    background-color:#fff;
+    max-width: 355px;
+    height: 563px;
+
+    border-radius: 20px;
+}
+
+header{
+    width:355px;
+}
+
+.MainContainer header img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+section {
+    height: 430px;
+
+    display: flex;
+    flex-flow: column;
+    margin-top:30px;
+    align-items:center;
+}
+
+section h1 {
+    margin:0;
+    margin-bottom:20px;
+    color:var(--main-color);
+    text-align:center;
+    font-size:1.8em;
+    font-family: Arial, Helvetica, "sans-serif";
+}
+
+section p{
+    
+    margin:0;
+    font:16px Arial,Helvetica,sans-serif;
+    color:gray;
+    text-align: center;
+    max-width:300px
+}
+
+section button{
+    border:none;
+    width:340px;
+    height:50px;
+
+    background-color:white;
+}
+
+section button#ProceedPayment{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font:bold 18px Arial,Helvetica,sans-serif;
+    color:white;
+    background-color:blue;
+    padding:20px;
+    text-align:center;
+    margin:10px 0 44px 0;
+    border-radius:15px;
+
+    box-shadow:2px 40px 10px rgba(0, 0, 0, 0.061);
+}
+
+section button#ProceedPayment:hover{
+    background-color:rgba(0, 0, 255, 0.486);
+    cursor:pointer;
+}
+
+section button#CancelOrder{
+    font:bold 16px Arial,Helvetica,sans-serif;
+    color:rgb(128, 128, 128);
+    height:30px;
+}
+
+section button#CancelOrder:hover{
+    color:var(--main-color);
+    cursor:pointer;
+}
+
+section aside{
+    display:flex;
+    flex-wrap:nowrap;
+    min-width:300px;
+    max-width:340px;
+    margin-top:20px;
+    height:40px;
+    /* justify-content:space-around; */
+    align-items:center;
+    background-color:rgba(194, 191, 191, 0.123);
+    padding:16px;
+    border-radius:15px;
+}
+
+aside img{
+    width: 12%;
+    height: 85%;
+}
+
+aside div#AnnualPlan{
+    display:flex;
+    flex-flow:column;
+    margin-left:15px;
+
+}
+
+aside p{
+    
+    margin:0;
+    
+    font-size:0.8em;
+}
+
+p#textPlan{
+    color:var(--main-color);
+    font-weight:bolder;
+    margin-bottom:5px;
+}
+
+p#valuePlan span {
+    text-decoration:underline;
+}
+
+aside a {
+    margin-left:110px;
+    font-weight:600;
+}
+
+aside:nth-child(3) {
+    flex-grow:0;
+    font-family:Arial, Helvetica, sans-serif;
+    
+    color:blue;
+}
+
+aside a:hover {
+   color:rgba(0, 0, 255, 0.377);
+   text-decoration:none;
+}
+

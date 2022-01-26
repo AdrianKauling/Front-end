@@ -1,8 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+}
 .container-flex{
     display: flex;
+    margin-top:40px;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
+    flex-flow:row wrap;
+    
+    
 }
 
 .child-flex{
+    flex-grow:1;
+    height:100px;
+    flex-basis:0;
+    flex-shrink:1;
+} 
+
+.child-flex:nth-child(1) {
+    background-color:rgb(66, 20, 20);
+    color:white;
 }
