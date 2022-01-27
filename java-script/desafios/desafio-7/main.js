@@ -43,4 +43,8 @@ function pigIt(str){
     return newWord.join(' ')
 }
 
-console.log(pigIt('Adrian Kauling dos santos ,'))
+function pigIt2(str){
+    return str.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3")
+  }
+
+console.log(pigIt2('Adrian Kauling dos santos ,'))

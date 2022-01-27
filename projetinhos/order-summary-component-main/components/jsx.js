@@ -13,9 +13,8 @@ function MyApp() {
 }
 
 function MyHeader() {
-  return /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement("img", {
-    src: "../images/illustration-hero.svg",
-    alt: "Garota ouvindo musica"
+  return /*#__PURE__*/React.createElement("header", null, /*#__PURE__*/React.createElement("div", {
+    id: "logo"
   }));
 }
 
@@ -28,9 +27,8 @@ function MySection() {
 }
 
 function MyAside() {
-  return /*#__PURE__*/React.createElement("aside", null, /*#__PURE__*/React.createElement("img", {
-    src: "../images/icon-music.svg",
-    alt: "icon Music"
+  return /*#__PURE__*/React.createElement("aside", null, /*#__PURE__*/React.createElement("div", {
+    id: "icon-music"
   }), /*#__PURE__*/React.createElement("div", {
     id: "AnnualPlan"
   }, /*#__PURE__*/React.createElement("p", {

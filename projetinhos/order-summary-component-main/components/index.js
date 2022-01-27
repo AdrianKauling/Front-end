@@ -13,7 +13,7 @@ function MyApp() {
 function MyHeader() {
     return (
         <header>
-            <img src="../images/illustration-hero.svg" alt="Garota ouvindo musica"/>
+            <div id="logo"></div>
         </header>
     )
 }
@@ -33,7 +33,7 @@ function MySection() {
 function MyAside(){
     return (
         <aside>
-            <img src="../images/icon-music.svg" alt="icon Music"/>
+            <div id="icon-music"></div>
             <div id="AnnualPlan">
                 <p id="textPlan">Annual Plan</p>
                 <p id="valuePlan"><span>$59.99</span>/year</p>
