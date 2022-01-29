@@ -1,52 +1,48 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form - login</title>
+        <link type="text/css" rel="stylesheet" href="./styles/reset.css"/>
+        <link type="text/css" rel="stylesheet" href="./styles/style.css"/>
 
-    <link type="text/css" href="./styles/style.css" rel="stylesheet"/>
-    <link type="text/css" href="./styles/reset.css" rel="stylesheet"/>
+        <script src="./scripts/main.js" defer></script>
+    </head>
+    <body>
+        <div id="app">
 
-    <script src="./scripts/main.js" defer></script>
+            <form id="form-login" action="">
+                <legend><h1>Login user</h1></legend>
 
-    <title>User login</title>
-</head>
-<body>
-    
-    <div id="app">
+                <div class="input-form">
+                    <input type="text" id="name" required/>
+                    <label for="name">Name</label>
+                    <span class="error"></span>
+                </div>
+                <div class="input-form">
+                    <input type="email" id="email" required/>
+                    <label for="email">Email</label>
+                    <span class="error"></span>
+                </div>
+                <div class="input-form">
+                    <input type="password" id="password" required/>
+                    <label for="password">Password</label>
+                    <span class="error"></span>
+                </div>
+                <div >
+                    <label for="gender">Gender: </label>
+                    <select id="gender">
+                        <option >Não informado</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Prefiro não informar</option>
+                    </select>
+                </div>
 
-        <form id="form-login" action="">
+                <button type="submit">Envair</button>
+            </form>
 
-            <div class="inputs" >
-                <input type="text" id="user" required autofocus/>
-                <label for="user">User</label>
-            </div>
-
-            <div class="inputs">
-                <input type="email" id="email" required/>
-                <label for="email">Email</label>
-            </div>
-
-            <div class="inputs">
-                <input type="password" id="password" required/>
-                <label for="password">Password</label>
-            </div>
-
-            <div class="inputs">
-                <select id="orientacao">
-                    <option>Não informado</option>
-                    <option>Masculino</option>
-                    <option>Feminino</option>
-                    <option>Prefiro não informar</option>
-                </select>
-            </div>
-
-            <button type="submit">Enviar</button>
-
-        </form>
-
-    </div>
-
-</body>
-
-</html
+        </div>
+    </body>
+</html>
