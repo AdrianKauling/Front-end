@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+div.container {
+    height:100vh;
+
+    padding:10px;
+    display:grid;
+
+    grid-template:
+    "header header header" minmax(100px, 700px)
+    "article article aside"  4fr 
+    "footer footer footer"   1fr
+   
+    / 1fr 1fr 1fr;    
+
+    column-gap:20px;
+    row-gap:20px;
+
+    gap:20px 20px;
+
+    gap:20px;
+    
+}
+
+.grid-item {
+    height:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    background-color:green;
+    grid-area:header;
+}
+article {
+    background-color:red;
+    grid-area:article;
+}
+aside {
+    background-color:blue;
+    grid-area:aside;
+}
+footer {
+    background-color:yellow;
+    grid-area:footer;
+}
+
+
