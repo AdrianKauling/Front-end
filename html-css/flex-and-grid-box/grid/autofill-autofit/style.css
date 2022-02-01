@@ -1,0 +1,30 @@
+.container{
+    display:grid;
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+
+    grid-template-columns:repeat(auto-fit,200px);
+    grid-template-rows:repeat(auto-fit,200px);
+
+    
+}
+.grid-item{
+    height:200px;
+}
+
+header{
+    background-color:red;
+}
+
+article{
+    background-color:green;
+}
+
+aside{
+    background-color:blue;
+}
+
+footer{
+    background-color:gray;
+}
